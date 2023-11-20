@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.ams.cspapplication"
+    namespace = "com.ams.timesyncedualert"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.ams.cspapplication"
+        applicationId = "com.ams.timesyncedualert"
         minSdk = 24
         targetSdk = 33
         versionCode = 1

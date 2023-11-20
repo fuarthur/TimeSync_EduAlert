@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import androidx.activity.ComponentActivity
-import com.ams.cspapplication.R
+import com.ams.timesyncedualert.R
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
