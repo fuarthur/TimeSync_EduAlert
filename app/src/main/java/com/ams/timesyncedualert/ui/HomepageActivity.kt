@@ -2,7 +2,7 @@ package com.ams.timesyncedualert.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
-import com.ams.cspapplication.R
+import com.ams.timesyncedualert.R
 
 class HomepageActivity: ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
