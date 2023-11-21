@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+        android:width="200dp"
+        android:height="200dp"
+        android:viewportWidth="200"
+        android:viewportHeight="200">
+
+    <!-- White Surround -->
+    <path
+            android:pathData="M100,100 m-73,0 a73,73 0 1,0 146,0 a73,73 0 1,0 -146,0"
+            android:fillColor="#FFFFFF" />
+    <!-- Clock Shape -->
+    <path
+            android:pathData="M100,100 m0,-70 a70,70 0 1,0 0,140 a70,70 0 1,0 0,-140"
+            android:fillColor="@color/color_primary" />
+
+    <!-- hour tick -->
+    <path
+            android:pathData="M100,50 L100,100"
+            android:strokeColor="#FFFFFF"
+            android:strokeWidth="4"
+            android:strokeLineCap="round" />
+    <!-- minute tick -->
+    <path
+            android:pathData="M99,101 L147,143"
+            android:strokeColor="#FFFFFF"
+            android:strokeWidth="2"
+            android:strokeLineCap="round" />
+
+    <!-- hour tick -->
+    <path
+            android:pathData="M100,50 L100,100"
+            android:strokeColor="#FFFFFF"
+            android:strokeWidth="4"
+            android:strokeLineCap="round" />
+
+    <!-- Center Circle -->
+    <path
+            android:pathData="M100,100 m-2,0 a3,3 0 1,0 4,0 a2,2 0 1,0 -4,0"
+            android:fillColor="#FFFFFF" />
+</vector>
