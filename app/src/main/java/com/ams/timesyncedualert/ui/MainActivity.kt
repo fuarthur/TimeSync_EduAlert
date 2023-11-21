@@ -13,7 +13,7 @@ class MainActivity : ComponentActivity() {
 
         Handler().postDelayed({
             navigateToHomepage()
-        }, R.integer.cover_delay_milis.toLong())
+        }, resources.getInteger(R.integer.cover_delay_milis).toLong())
     }
 
     private fun navigateToHomepage() {
