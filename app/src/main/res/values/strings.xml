@@ -2,5 +2,7 @@
     <string name="app_name">TimeSync EduAlert</string>
     <string name="tip2">left until the next class</string>
     <string name="tip1">There are still</string>
+    <string name="button">Button</string>
+    <string name="setting">Setting</string>
 
 </resources>

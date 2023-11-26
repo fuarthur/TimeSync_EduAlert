@@ -1,16 +1,23 @@
 package com.ams.timesyncedualert.ui
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import androidx.activity.ComponentActivity
 import com.ams.timesyncedualert.R
+import com.ams.timesyncedualert.utils.FileHandler
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cover)
+
+        // Initialize data file
+        val context: Context = this
+        FileHandler.CourseHandler.checkAndCreateFile(context.filesDir.toString())
+        FileHandler.SettingHandler.checkAndCreateFile(context.filesDir.toString())
 
         Handler(Looper.myLooper()!!).postDelayed({
             navigateToHomepage()
@@ -22,4 +29,5 @@ class MainActivity : ComponentActivity() {
         startActivity(intent)
         finish()
     }
+
 }
