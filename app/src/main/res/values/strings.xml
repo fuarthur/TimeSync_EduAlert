@@ -2,6 +2,14 @@
     <string name="app_name">TimeSync EduAlert</string>
     <string name="tip2">left until the next class</string>
     <string name="tip1">There are still</string>
+    <string name="schedule_title">Schedule</string>
+    <string name="setting_title">Setting</string>
+    <string name="plus">+</string>
+    <string name="monday">Mon</string>
+    <string name="tuesday">Tues</string>
+    <string name="wednesday">Wed</string>
+    <string name="thursday">Thur</string>
+    <string name="friday">Fri</string>
     <string name="button">Button</string>
     <string name="setting">Setting</string>
 
