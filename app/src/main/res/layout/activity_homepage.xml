@@ -51,8 +51,8 @@
             app:menu="@menu/bottomnavi"
             android:layout_width="match_parent"
             android:background="@color/color_primary"
-            android:layout_height="180px"
-            android:layout_marginTop="1760px"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
             />
 
 
