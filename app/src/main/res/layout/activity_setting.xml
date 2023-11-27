@@ -1,45 +1,28 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
-              android:orientation="vertical">
-
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@color/white"
+>
     <TextView
             android:id="@+id/home_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/app_name"
+            android:text="@string/setting_title"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="16dp"
             android:background="@color/color_primary"
             android:textColor="@android:color/white"/>
 
-    <TextView
-            android:id="@+id/setting_title"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+            app:menu="@menu/bottom_navi"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Setting"
-            android:textSize="40sp"
-            android:textStyle="bold"
-            android:padding="16dp"
-            android:textColor="@color/color_primary"
-            android:gravity="center"/>
+            android:background="@color/color_primary"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
+    />
 
-    <Button
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:text="Set Reminding Time"
-            android:fontFamily="@font/regular"
-            android:textAllCaps="false"
-            android:textSize="30sp"/>
-
-    <Button
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:text="Switch of Reminder"
-            android:fontFamily="@font/regular"
-            android:textAllCaps="false"
-            android:textSize="30sp"/>
-
-</LinearLayout>
+</RelativeLayout>
