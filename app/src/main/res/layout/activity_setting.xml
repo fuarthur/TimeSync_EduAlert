@@ -2,27 +2,128 @@
 <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:background="@color/white"
->
+        android:layout_height="match_parent">
+
     <TextView
             android:id="@+id/home_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/setting_title"
+            android:text="@string/timesync_edualert_setting"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="16dp"
             android:background="@color/color_primary"
             android:textColor="@android:color/white"/>
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-            app:menu="@menu/bottom_navi"
+    <ScrollView
             android:layout_width="match_parent"
-            android:background="@color/color_primary"
-            android:layout_height="70dp"
-            android:layout_alignParentBottom="true"
-    />
+            android:layout_height="match_parent">
+
+        <!-- Content that needs scrolling -->
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <!-- Place your longer code or content here -->
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"/>
+
+            <TextView
+                    android:id="@+id/setRemindingTime_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Set Reminding Time"
+                    android:textSize="40sp"
+                    android:textStyle="bold"
+                    android:padding="16dp"
+                    android:textColor="@color/color_primary"
+                    android:gravity="center"/>
+
+            <TextView
+                    android:id="@+id/youWantYouBeRemindedAfter_title"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:text="You want yourself be reminded after"
+                    android:textSize="30sp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"/>
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+
+                <EditText
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"/>
+
+                <TextView
+                        android:id="@+id/minute_title"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/minutes_setting"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"/>
+
+                <EditText
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"/>
+
+                <TextView
+                        android:id="@+id/second_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/seconds_setting"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"/>
+
+            </LinearLayout>
+
+            <TextView
+                    android:id="@+id/switchOfReminder_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/switch_of_reminder"
+                    android:textSize="40sp"
+                    android:textStyle="bold"
+                    android:padding="16dp"
+                    android:textColor="@color/color_primary"
+                    android:gravity="center"/>
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/switch_of_reminder_subtitle"
+                        android:layout_marginEnd="20dp"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"/>
+
+                <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/switchOfReminder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_marginEnd="50dp"
+                        android:scaleX="2"
+                        android:scaleY="2" />
+
+            </LinearLayout>
+
+            <!-- It can span multiple pages or exceed the screen height -->
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </RelativeLayout>
