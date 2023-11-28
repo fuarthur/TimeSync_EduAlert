@@ -11,6 +11,10 @@
     <string name="thursday">Thur</string>
     <string name="friday">Fri</string>
     <string name="button">Button</string>
-    <string name="setting">Setting</string>
+    <string name="timesync_edualert_setting">TimeSync EduAlert -- Setting</string>
+    <string name="minutes_setting">minutes</string>
+    <string name="seconds_setting">seconds</string>
+    <string name="switch_of_reminder">Switch of Reminder</string>
+    <string name="switch_of_reminder_subtitle">switch of reminder</string>
 
 </resources>
