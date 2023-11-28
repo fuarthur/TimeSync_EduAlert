@@ -6,7 +6,7 @@
                 android:background="@color/white"
 >
     <TextView
-            android:id="@+id/home_title"
+            android:id="@+id/schedule_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/schedule_title"
@@ -89,6 +89,17 @@
             android:text="@string/plus"
             android:textSize="35sp"
     />
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_schedule"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:padding="8dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_marginTop="120dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+    />
+
 
 
 
