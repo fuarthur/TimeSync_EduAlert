@@ -4,6 +4,7 @@ import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import java.nio.charset.Charset
 import com.ams.timesyncedualert.model.Course
+import com.ams.timesyncedualert.model.Setting
 import java.io.File
 
 /**
@@ -100,9 +101,9 @@ class FileHandler {
          * @param filePath The path to the directory where the file is located.
          * @return A mutable list of settings read from the file.
          */
-        fun readSettings(filePath: String): MutableList<Course> {
+        fun readSettings(filePath: String): MutableList<Setting> {
             val fileContent = File(filePath + FILENAME).readText(Charset.defaultCharset())
-            val listType = object : TypeToken<MutableList<Course>>() {}.type
+            val listType = object : TypeToken<MutableList<Setting>>() {}.type
             return Gson().fromJson(fileContent, listType)
         }
 
@@ -112,7 +113,7 @@ class FileHandler {
          * @param settingsList The list of settings to be written to the file.
          * @param filePath The path to the directory where the file should be written.
          */
-        fun writeSettings(settingsList: MutableList<Course>, filePath: String) {
+        fun writeSettings(settingsList: MutableList<Setting>, filePath: String) {
             val json = Gson().toJson(settingsList)
             File(filePath + FILENAME).writeText(json, Charset.defaultCharset())
         }
