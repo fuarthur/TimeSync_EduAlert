@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
+                xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:background="@color/white"
@@ -89,16 +89,95 @@
             android:text="@string/plus"
             android:textSize="35sp"
     />
-    <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_schedule"
+    <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="400dp"
-            android:padding="8dp"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            android:layout_marginTop="120dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-    />
+            android:layout_height="410dp"
+            android:layout_marginTop="130dp">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+            <TextView
+                    android:id="@+id/period1"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="@string/no_class_string"
+                    android:textSize="30sp"
+                    android:background="@color/white"/>
+
+            <TextView
+                    android:id="@+id/period2"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="@string/no_class_string"
+                    android:textSize="30sp"
+                    android:background="@color/white"/>
+
+            <TextView
+                    android:id="@+id/period3"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="@string/no_class_string"
+                    android:textSize="30sp"
+                    android:background="@color/white"/>
+
+            <TextView
+                    android:id="@+id/period4"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="@string/no_class_string"
+                    android:textSize="30sp"
+                    android:background="@color/white"/>
+
+            <TextView
+                    android:id="@+id/period5"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="@string/no_class_string"
+                    android:textSize="30sp"
+                    android:background="@color/white"/>
+
+            <TextView
+                    android:id="@+id/period6"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="@string/no_class_string"
+                    android:textSize="30sp"
+                    android:background="@color/white"/>
+
+            <TextView
+                    android:id="@+id/period7"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="@string/no_class_string"
+                    android:textSize="30sp"
+                    android:background="@color/white"/>
+
+            <TextView
+                    android:id="@+id/period8"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="@string/no_class_string"
+                    android:textSize="30sp"
+                    android:background="@color/white"/>
+
+            <TextView
+                    android:id="@+id/period9"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="@string/no_class_string"
+                    android:textSize="30sp"
+                    android:background="@color/white"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
 
 
 
