@@ -11,10 +11,20 @@
     <string name="thursday">Thur</string>
     <string name="friday">Fri</string>
     <string name="button">Button</string>
+    <string name="setting">Setting</string>
+    <string name="setting_tip1">Please enter a class the schedule</string>
+    <string name="enter_hint">Please enter your class</string>
+    <string name="enter">enter</string>
+    <string name="enter_class_name">Please enter your class name</string>
+    <string name="enter_class_period">Please enter you class period</string>
+    <string name="enter_class_weekday">Please enter the weekday of class</string>
+    <string name="enter_class_room">Please enter you class room</string>
+    <string name="tip3">Next class</string>
     <string name="timesync_edualert_setting">TimeSync EduAlert -- Setting</string>
     <string name="minutes_setting">minutes</string>
     <string name="seconds_setting">seconds</string>
     <string name="switch_of_reminder">Switch of Reminder</string>
     <string name="switch_of_reminder_subtitle">switch of reminder</string>
+    <string name="no_class_string">N/A</string>
 
 </resources>
