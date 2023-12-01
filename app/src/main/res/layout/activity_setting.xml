@@ -54,11 +54,11 @@
             <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:orientation="horizontal">
-
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="70dp">
 
                 <EditText
+                        android:id="@+id/minute_interact"
                         android:layout_width="50dp"
                         android:layout_height="50dp"/>
 
@@ -69,8 +69,8 @@
                         android:text="@string/minutes_setting"
                         android:textSize="20sp"
                         android:textColor="@color/black"/>
-
                 <EditText
+                        android:id="@+id/second_interact"
                         android:layout_width="50dp"
                         android:layout_height="50dp"/>
 
@@ -81,6 +81,13 @@
                         android:text="@string/seconds_setting"
                         android:textSize="20sp"
                         android:textColor="@color/black"/>
+
+                <Button
+                        android:text="@string/submit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/submit_button_time"/>
+
 
             </LinearLayout>
 
