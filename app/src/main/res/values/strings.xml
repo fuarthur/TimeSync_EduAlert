@@ -26,5 +26,6 @@
     <string name="switch_of_reminder">Switch of Reminder</string>
     <string name="switch_of_reminder_subtitle">switch of reminder</string>
     <string name="no_class_string">N/A</string>
+    <string name="submit_settings">submit</string>
 
 </resources>

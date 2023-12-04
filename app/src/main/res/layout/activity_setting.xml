@@ -83,7 +83,7 @@
                         android:textColor="@color/black"/>
 
                 <Button
-                        android:text="@string/submit"
+                        android:text="@string/submit_settings"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/submit_button_time"/>
