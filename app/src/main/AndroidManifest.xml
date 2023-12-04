@@ -29,6 +29,11 @@
                 android:theme="@style/Theme.AppCompat">
         </activity>
 
+        <activity
+                android:name=".ui.SettingActivity"
+                android:theme="@style/Theme.AppCompat">
+        </activity>
+
     </application>
 
 </manifest>
