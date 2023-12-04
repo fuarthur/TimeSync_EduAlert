@@ -27,5 +27,10 @@
     <string name="switch_of_reminder_subtitle">switch of reminder</string>
     <string name="no_class_string">N/A</string>
     <string name="submit_settings">submit</string>
-
+    <string name="valid_name">Please enter a valid name</string>
+    <string name="name_length">Please enter a name with 1 to 20 characters</string>
+    <string name="valid_period">Please enter a valid period</string>
+    <string name="valid_weekday">Please enter a valid weekday</string>
+    <string name="valid_classroom">Please enter a valid classroom</string>
+    <string name="success_add">Course added</string>
 </resources>
