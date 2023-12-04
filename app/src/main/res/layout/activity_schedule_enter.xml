@@ -43,7 +43,7 @@
             android:layout_height="60dp"
             android:layout_marginTop="290dp"
             android:hint="@string/enter_class_period"
-            android:inputType="text"
+            android:inputType="number"
     />
 
     <EditText
@@ -52,7 +52,7 @@
             android:layout_height="60dp"
             android:layout_marginTop="350dp"
             android:hint="@string/enter_class_weekday"
-            android:inputType="text"
+            android:inputType="number"
     />
 
     <EditText
@@ -61,7 +61,7 @@
             android:layout_height="60dp"
             android:layout_marginTop="410dp"
             android:hint="@string/enter_class_room"
-            android:inputType="text"
+            android:inputType="number"
     />
 
     <Button

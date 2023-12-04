@@ -172,6 +172,14 @@
                     android:textSize="30sp"
                     android:background="@color/white"/>
 
+            <TextView
+                    android:id="@+id/period10"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="@string/no_class_string"
+                    android:textSize="30sp"
+                    android:background="@color/white"/>
+
 
         </LinearLayout>
     </ScrollView>

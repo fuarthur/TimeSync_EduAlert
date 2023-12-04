@@ -16,8 +16,8 @@
     <string name="enter_hint">Please enter your class</string>
     <string name="enter">enter</string>
     <string name="enter_class_name">Please enter your class name</string>
-    <string name="enter_class_period">Please enter you class period</string>
-    <string name="enter_class_weekday">Please enter the weekday of class</string>
+    <string name="enter_class_period">Please enter you class period(1-10)</string>
+    <string name="enter_class_weekday">Please enter the weekday of class(1-5)</string>
     <string name="enter_class_room">Please enter you class room</string>
     <string name="tip3">Next class</string>
     <string name="timesync_edualert_setting">TimeSync EduAlert -- Setting</string>
