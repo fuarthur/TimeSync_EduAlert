@@ -5,7 +5,9 @@ import com.google.gson.reflect.TypeToken
 import java.nio.charset.Charset
 import com.ams.timesyncedualert.model.Course
 import com.ams.timesyncedualert.model.Setting
+import java.io.BufferedReader
 import java.io.File
+import java.io.InputStreamReader
 
 /**
  * Utility class for handling files related to courses and settings.
@@ -116,6 +118,24 @@ class FileHandler {
         fun writeSettings(settingsList: MutableList<Setting>, filePath: String) {
             val json = Gson().toJson(settingsList)
             File(filePath + FILENAME).writeText(json, Charset.defaultCharset())
+        }
+    }
+
+    /**
+     * This object provides functions for handling assets.
+     */
+    object AssetsHandler {
+        /**
+         * Reads the content of a JSON file and returns it as a map of string keys and integer arrays.
+         *
+         * @param fileName The name of the JSON file to be read.
+         * @return A map object with string keys and integer arrays as values. */
+        fun readJsonFile(fileName: String): Map<String, Array<Int>> {
+            val inputStream = javaClass.classLoader?.getResourceAsStream(fileName)
+            val reader = BufferedReader(InputStreamReader(inputStream))
+            val json = reader.readText()
+            val typeToken = object : TypeToken<Map<String, Array<Int>>>() {}.type
+            return Gson().fromJson(json, typeToken)
         }
     }
 }
