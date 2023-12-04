@@ -21,7 +21,7 @@
             android:layout_height="200dp"
             android:layout_marginTop="110dp"
             android:layout_centerHorizontal="true"
-            android:text="@string/app_name"
+            android:text="@string/no_class_string"
             android:textSize="40sp"
             android:textStyle="bold"
             android:background="@drawable/count_down_shape"
