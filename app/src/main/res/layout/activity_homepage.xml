@@ -65,7 +65,8 @@
             android:text="@string/no_class_string"
             android:textSize="30sp"
             android:layout_marginTop="430dp"
-            android:background="@color/white"/>
+            android:background="@color/white"
+            android:textColor="@color/black"/>
 
     <TextView
             android:id="@+id/next_period2"
@@ -74,7 +75,8 @@
             android:text="@string/no_class_string"
             android:textSize="30sp"
             android:layout_marginTop="490dp"
-            android:background="@color/white"/>
+            android:background="@color/white"
+            android:textColor="@color/black"/>
 
     <TextView
             android:id="@+id/next_period3"
@@ -83,7 +85,8 @@
             android:text="@string/no_class_string"
             android:textSize="30sp"
             android:layout_marginTop="550dp"
-            android:background="@color/white"/>
+            android:background="@color/white"
+            android:textColor="@color/black"/>
 
 
 
