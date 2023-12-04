@@ -45,7 +45,7 @@ class HomepageActivity : ComponentActivity() {
                     mCountdown.text = "$minutes minutes"
 
                     if (minutes == timePreset) {
-                        // todo: show n otification
+                        // todo: show notification
                     }
                 }
 
@@ -73,7 +73,7 @@ class HomepageActivity : ComponentActivity() {
         val timeMap = when (weekday) {
             1 -> FileHandler.AssetsHandler.readJsonFile("schedule_monday.json")
             2 -> FileHandler.AssetsHandler.readJsonFile("schedule_tuesday.json")
-            else -> FileHandler.AssetsHandler.w("schedule_rest.json")
+            else -> FileHandler.AssetsHandler.readJsonFile("schedule_rest.json")
         }
 
         var cPeriod = -1
