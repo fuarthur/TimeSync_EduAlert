@@ -7,10 +7,17 @@ import androidx.activity.ComponentActivity
 import com.ams.timesyncedualert.R
 import android.widget.Button
 import android.widget.TextView
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 import com.ams.timesyncedualert.model.Course
+import com.ams.timesyncedualert.ui.fragment.HomeFragment
+import com.ams.timesyncedualert.ui.fragment.ScheduleFragment
+import com.ams.timesyncedualert.ui.fragment.SettingFragment
 import com.ams.timesyncedualert.utils.FileHandler
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class ScheduleActivity : ComponentActivity() {
+class ScheduleActivity(val supportFragmentManager: FragmentManager) : ComponentActivity() {
     private val mScheduleMonday by lazy { findViewById<Button>(R.id.Schedule_monday) }
     private val mScheduleTuesday by lazy { findViewById<Button>(R.id.Schedule_tuesday) }
     private val mScheduleWednesday by lazy { findViewById<Button>(R.id.Schedule_wednesday) }
@@ -29,6 +36,7 @@ class ScheduleActivity : ComponentActivity() {
     private val mPeriod10 by lazy { findViewById<TextView>(R.id.period10) }
     private lateinit var courseList: MutableList<Course>
     private var weekDay: Int = 1
+    private lateinit var bottomNavigation: BottomNavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,6 +56,32 @@ class ScheduleActivity : ComponentActivity() {
             }
         }
         updateUI()
+
+        bottomNavigation = findViewById(R.id.bottom_navi)
+
+        bottomNavigation.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.navigation_Home -> {
+                    // 切换到 HomeFragment
+                    replaceFragment(HomeFragment())
+                    true
+                }
+
+                R.id.navigation_Schedule -> {
+                    // 切换到 ScheduleFragment
+                    replaceFragment(ScheduleFragment())
+                    true
+                }
+
+                R.id.navigation_Setting -> {
+                    // 切换到 SettingFragment
+                    replaceFragment(SettingFragment())
+                    true
+                }
+
+                else -> false
+            }
+        }
     }
 
     private fun updateUI() {
@@ -74,4 +108,16 @@ class ScheduleActivity : ComponentActivity() {
         startActivity(intent)
         finish()
     }
+    private fun replaceFragment(fragment: Fragment) {
+        val fragmentManager: FragmentManager = supportFragmentManager
+        val transaction: FragmentTransaction = fragmentManager.beginTransaction()
+        transaction.replace(
+            androidx.fragment.R.id.fragment_container_view_tag,
+            fragment
+        ) // R.id.fragment_container 是你的 Fragment 容器的 ID
+        transaction.addToBackStack(null)
+        transaction.commit()
+    }
 }
+
+

@@ -139,3 +139,7 @@ class FileHandler {
         }
     }
 }
+
+object FileHandler {
+
+}
