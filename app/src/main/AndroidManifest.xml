@@ -34,6 +34,16 @@
                 android:theme="@style/Theme.AppCompat">
         </activity>
 
+        <activity
+                android:name=".ui.ScheduleActivity"
+                android:theme="@style/Theme.AppCompat">
+        </activity>
+
+        <activity
+                android:name=".ui.ScheduleEnterActivity"
+                android:theme="@style/Theme.AppCompat">
+        </activity>
+
     </application>
 
 </manifest>

@@ -17,12 +17,13 @@ class HomepageActivity : ComponentActivity() {
     private val mNextPeriod3 by lazy { findViewById<TextView>(R.id.next_period3) }
     private var currentPeriod: Int = 1
     private val context: Context = this
-    private var courseList: MutableList<Course> = FileHandler.CourseHandler.readCourseList(context.filesDir.toString())
+    private lateinit var courseList: MutableList<Course>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_homepage)
-        updateCurrentPeriod()
-        updateUI()
+//        courseList = FileHandler.CourseHandler.readCourseList(context.filesDir.toString())
+//        updateCurrentPeriod()
+//        updateUI()
     }
 
     private fun updateUI() {
@@ -71,9 +72,9 @@ class HomepageActivity : ComponentActivity() {
         val hour = now.get(Calendar.HOUR_OF_DAY)
         val minute = now.get(Calendar.MINUTE)
         val timeMap = when (weekday) {
-            1 -> FileHandler.AssetsHandler.readJsonFile("schedule_monday.json")
-            2 -> FileHandler.AssetsHandler.readJsonFile("schedule_tuesday.json")
-            else -> FileHandler.AssetsHandler.readJsonFile("schedule_rest.json")
+            1 -> FileHandler.AssetsHandler.readJsonFile(context, "schedule_monday.json")
+            2 -> FileHandler.AssetsHandler.readJsonFile(context, "schedule_tuesday.json")
+            else -> FileHandler.AssetsHandler.readJsonFile(context, "schedule_rest.json")
         }
 
         var cPeriod = -1
@@ -89,5 +90,9 @@ class HomepageActivity : ComponentActivity() {
         if (cPeriod != -1) {
             currentPeriod = cPeriod
         }
+    }
+
+    private fun navigateToSchedule() {
+
     }
 }
