@@ -34,4 +34,5 @@
     <string name="valid_classroom">Please enter a valid classroom</string>
     <string name="success_add">Course added</string>
     <string name="minutes">min\n</string>
+    <string name="back">Back</string>
 </resources>
