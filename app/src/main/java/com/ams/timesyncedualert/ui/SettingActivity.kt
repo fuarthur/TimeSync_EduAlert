@@ -24,7 +24,7 @@ class SettingActivity(val supportFragmentManager: FragmentManager) : ComponentAc
     private var second: Int = 0;
     private lateinit var bottomNavigation: BottomNavigationView
 
-    @SuppressLint("MissingInflatedId")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_setting)
