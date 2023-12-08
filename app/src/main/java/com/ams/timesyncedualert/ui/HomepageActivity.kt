@@ -18,6 +18,8 @@ import com.ams.timesyncedualert.ui.fragment.ScheduleFragment
 import com.ams.timesyncedualert.ui.fragment.SettingFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.fragment.NavHostFragment
+
 
 
     class HomepageActivity() : AppCompatActivity() {
