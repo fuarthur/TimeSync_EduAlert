@@ -3,6 +3,7 @@ package com.ams.timesyncedualert.ui
 import android.content.Context
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.util.Log
 import android.widget.TextView
 import androidx.activity.ComponentActivity
 import androidx.fragment.app.Fragment
@@ -16,26 +17,26 @@ import com.ams.timesyncedualert.ui.fragment.HomeFragment
 import com.ams.timesyncedualert.ui.fragment.ScheduleFragment
 import com.ams.timesyncedualert.ui.fragment.SettingFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import androidx.appcompat.app.AppCompatActivity
 
-class HomepageActivity(val supportFragmentManager: FragmentManager) : ComponentActivity() {
 
-    class HomepageActivity(val supportFragmentManager: FragmentManager) : ComponentActivity() {
+    class HomepageActivity() : AppCompatActivity() {
         private val mCountdown by lazy { findViewById<TextView>(R.id.countdown) }
         private val mNextPeriod1 by lazy { findViewById<TextView>(R.id.next_period1) }
         private val mNextPeriod2 by lazy { findViewById<TextView>(R.id.next_period2) }
         private val mNextPeriod3 by lazy { findViewById<TextView>(R.id.next_period3) }
         private var currentPeriod: Int = 1
         private val context: Context = this
-        private var courseList: MutableList<Course> =
-            FileHandler.CourseHandler.readCourseList(context.filesDir.toString())
+        private lateinit var courseList: MutableList<Course>
         private lateinit var bottomNavigation: BottomNavigationView
 
-        @SuppressLint("MissingInflatedId")
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
+            Log.d("user", "enter homepage 1")
             setContentView(R.layout.activity_homepage)
-            updateCurrentPeriod()
-            updateUI()
+            Log.d("user", "enter homepage 2")
+//            updateCurrentPeriod()
+//            updateUI()
 
             bottomNavigation = findViewById(R.id.bottom_navi)
 
@@ -144,5 +145,4 @@ class HomepageActivity(val supportFragmentManager: FragmentManager) : ComponentA
             transaction.commit()
         }
     }
-}
 

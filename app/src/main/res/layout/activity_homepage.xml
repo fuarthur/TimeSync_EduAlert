@@ -49,6 +49,7 @@
             android:background="@color/white"
             android:textColor="@color/black"/>
     <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navi"
             app:menu="@menu/bottom_navi"
             android:layout_width="match_parent"
             android:background="@color/color_primary"
