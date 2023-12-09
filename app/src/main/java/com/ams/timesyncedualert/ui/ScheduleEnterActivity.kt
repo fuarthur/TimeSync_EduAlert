@@ -45,19 +45,56 @@ class ScheduleEnterActivity : ComponentActivity() {
                     mClassClassroomEnter.text.toString()
                 )
             ) {
-                val courseAdd: Course = Course(
+                val courseAdd = Course(
                     mClassNameEnter.text.toString(),
                     mClassPeriodEnter.text.toString().toInt(),
                     mClassWeekdayEnter.text.toString().toInt(),
                     mClassClassroomEnter.text.toString(),
                 )
-                courseList.add(courseAdd)
+                // Check for duplicates and replace or add the course accordingly
+                if (isDuplicateCourse(courseList, courseAdd)) {
+                    replaceDuplicateCourse(courseList, courseAdd)
+                } else {
+                    courseList.add(courseAdd)
+                }
+                // Debug only
                 Log.d("user", courseList.toString())
                 FileHandler.CourseHandler.writeCourseList(courseList, context.filesDir.toString())
                 Toast.makeText(this, R.string.success_add, Toast.LENGTH_SHORT).show()
                 navigateToSchedule()
             }
         }
+    }
+
+    /**
+     * Checks if there is a duplicate course in the given [courseList] with the same class period and weekday.
+     *
+     * @param courseList The list of courses to check for duplicates.
+     * @param courseAdd The course to be added, used for comparison with existing courses.
+     * @return True if a duplicate course is found, false otherwise.
+     */
+    private fun isDuplicateCourse(courseList: MutableList<Course>, courseAdd: Course): Boolean {
+        return courseList.any {
+            it.period == courseAdd.period && it.weekDay == courseAdd.weekDay
+        }
+    }
+
+    /**
+     * Replaces any existing course in the [courseList] with the same class period and weekday as [courseAdd].
+     * The existing course is removed, and [courseAdd] is added to the list.
+     *
+     * @param courseList The list of courses to modify.
+     * @param courseAdd The course to be added, replacing any existing course with the same period and weekday.
+     */
+    private fun replaceDuplicateCourse(courseList: MutableList<Course>, courseAdd: Course) {
+        val iterator = courseList.iterator()
+        while (iterator.hasNext()) {
+            val existingCourse = iterator.next()
+            if (existingCourse.period == courseAdd.period && existingCourse.weekDay == courseAdd.weekDay) {
+                iterator.remove()
+            }
+        }
+        courseList.add(courseAdd)
     }
 
     /**
