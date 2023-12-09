@@ -3,6 +3,7 @@ package com.ams.timesyncedualert.ui
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import com.ams.timesyncedualert.R
 import android.widget.EditText
@@ -39,9 +40,9 @@ class ScheduleEnterActivity : ComponentActivity() {
         mScheduleEditEnterButton.setOnClickListener {
             if (isEnterLegal(
                     mClassNameEnter.text.toString(),
-                    mClassPeriodEnter.toString().toInt(),
-                    mClassWeekdayEnter.toString().toInt(),
-                    mClassClassroomEnter.toString()
+                    mClassPeriodEnter.text.toString().toInt(),
+                    mClassWeekdayEnter.text.toString().toInt(),
+                    mClassClassroomEnter.text.toString()
                 )
             ) {
                 val courseAdd: Course = Course(
@@ -51,6 +52,7 @@ class ScheduleEnterActivity : ComponentActivity() {
                     mClassClassroomEnter.text.toString(),
                 )
                 courseList.add(courseAdd)
+                Log.d("user", courseList.toString())
                 FileHandler.CourseHandler.writeCourseList(courseList, context.filesDir.toString())
                 Toast.makeText(this, R.string.success_add, Toast.LENGTH_SHORT).show()
                 navigateToSchedule()
@@ -62,7 +64,7 @@ class ScheduleEnterActivity : ComponentActivity() {
      * Navigates to the Schedule Activity.
      */
     private fun navigateToSchedule() {
-        val intent = Intent(this, ScheduleEnterActivity::class.java)
+        val intent = Intent(this, ScheduleActivity::class.java)
         startActivity(intent)
         finish()
     }

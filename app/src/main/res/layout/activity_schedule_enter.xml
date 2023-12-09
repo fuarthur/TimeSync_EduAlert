@@ -2,7 +2,9 @@
 <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
+        android:background="@color/white"
         android:layout_height="match_parent">
+
     <TextView
             android:id="@+id/schedule_title_title"
             android:layout_width="match_parent"
@@ -34,6 +36,8 @@
             android:layout_height="60dp"
             android:layout_marginTop="230dp"
             android:hint="@string/enter_class_name"
+            android:textColorHint="@android:color/black"
+            android:textColor="@android:color/black"
             android:inputType="text"
     />
 
@@ -43,6 +47,8 @@
             android:layout_height="60dp"
             android:layout_marginTop="290dp"
             android:hint="@string/enter_class_period"
+            android:textColorHint="@android:color/black"
+            android:textColor="@android:color/black"
             android:inputType="number"
     />
 
@@ -52,6 +58,8 @@
             android:layout_height="60dp"
             android:layout_marginTop="350dp"
             android:hint="@string/enter_class_weekday"
+            android:textColorHint="@android:color/black"
+            android:textColor="@android:color/black"
             android:inputType="number"
     />
 
@@ -61,6 +69,8 @@
             android:layout_height="60dp"
             android:layout_marginTop="410dp"
             android:hint="@string/enter_class_room"
+            android:textColorHint="@android:color/black"
+            android:textColor="@android:color/black"
             android:inputType="number"
     />
 
@@ -83,7 +93,7 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="80dp"
             android:background="@color/color_primary"
-            android:text="Back"
+            android:text="@string/back"
             android:textColor="@color/white"
             android:textSize="15sp"
     />
