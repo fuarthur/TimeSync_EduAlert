@@ -1,28 +1,21 @@
 package com.ams.timesyncedualert.ui
 
-import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import androidx.activity.ComponentActivity
 import androidx.appcompat.widget.SwitchCompat
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentTransaction
 import com.ams.timesyncedualert.R
-import com.ams.timesyncedualert.ui.fragment.HomeFragment
-import com.ams.timesyncedualert.ui.fragment.ScheduleFragment
-import com.ams.timesyncedualert.ui.fragment.SettingFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import android.content.Intent
 
-class SettingActivity(val supportFragmentManager: FragmentManager) : ComponentActivity() {
+class SettingActivity : ComponentActivity() {
     private lateinit var buttonTimeChange: Button
     private lateinit var editTextMinute: EditText
     private lateinit var editTextSecond: EditText
     private lateinit var switchReminder: SwitchCompat
-    private var minute: Int = 0;
-    private var second: Int = 0;
+    private var minute: Int = 0
+    private var second: Int = 0
     private lateinit var bottomNavigation: BottomNavigationView
 
 
@@ -43,24 +36,16 @@ class SettingActivity(val supportFragmentManager: FragmentManager) : ComponentAc
         bottomNavigation.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.navigation_Home -> {
-                    // 切换到 HomeFragment
-                    replaceFragment(HomeFragment())
-                    true
+                    navigateToHomepage()
                 }
 
                 R.id.navigation_Schedule -> {
-                    // 切换到 ScheduleFragment
-                    replaceFragment(ScheduleFragment())
-                    true
+                    navigateToSchedule()
                 }
 
                 R.id.navigation_Setting -> {
-                    // 切换到 SettingFragment
-                    replaceFragment(SettingFragment())
-                    true
-                }
 
-                else -> false
+                }
             }
 
             when (item.itemId) {
@@ -72,14 +57,14 @@ class SettingActivity(val supportFragmentManager: FragmentManager) : ComponentAc
         }
 
     }
-    private fun replaceFragment(fragment: Fragment) {
-        val fragmentManager: FragmentManager = supportFragmentManager
-        val transaction: FragmentTransaction = fragmentManager.beginTransaction()
-        transaction.replace(
-            androidx.fragment.R.id.fragment_container_view_tag,
-            fragment
-        ) // R.id.fragment_container 是你的 Fragment 容器的 ID
-        transaction.addToBackStack(null)
-        transaction.commit()
+    private fun navigateToSchedule() {
+        val intent = Intent(this, ScheduleActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
+    private fun navigateToHomepage() {
+        val intent = Intent(this, HomepageActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 }

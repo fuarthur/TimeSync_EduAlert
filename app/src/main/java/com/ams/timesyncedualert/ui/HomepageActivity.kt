@@ -1,17 +1,12 @@
 package com.ams.timesyncedualert.ui
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentTransaction
 import com.ams.timesyncedualert.R
 import com.ams.timesyncedualert.model.Course
-import com.ams.timesyncedualert.ui.fragment.HomeFragment
-import com.ams.timesyncedualert.ui.fragment.ScheduleFragment
-import com.ams.timesyncedualert.ui.fragment.SettingFragment
 import com.ams.timesyncedualert.utils.FileHandler
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import java.util.*
@@ -38,18 +33,17 @@ class HomepageActivity : AppCompatActivity() {
         bottomNavigation.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.navigation_Home -> {
-                    // 切换到 HomeFragment
-                    replaceFragment(HomeFragment())
+
                 }
 
                 R.id.navigation_Schedule -> {
                     // 切换到 ScheduleFragment
-                    replaceFragment(ScheduleFragment())
+                    navigateToSchedule()
                 }
 
                 R.id.navigation_Setting -> {
                     // 切换到 SettingFragment
-                    replaceFragment(SettingFragment())
+                    navigateToSetting()
                 }
             }
             when (item.itemId) {
@@ -129,15 +123,16 @@ class HomepageActivity : AppCompatActivity() {
 
     }
 
-    private fun replaceFragment(fragment: Fragment) {
-        val fragmentManager: FragmentManager = supportFragmentManager
-        val transaction: FragmentTransaction = fragmentManager.beginTransaction()
-        transaction.replace(
-            androidx.fragment.R.id.fragment_container_view_tag,
-            fragment
-        ) // R.id.fragment_container 是你的 Fragment 容器的 ID
-        transaction.addToBackStack(null)
-        transaction.commit()
+    private fun navigateToSchedule() {
+        val intent = Intent(this, ScheduleActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
+
+    private fun navigateToSetting() {
+        val intent = Intent(this, SettingActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 }
 
