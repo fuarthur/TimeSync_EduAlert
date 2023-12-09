@@ -1,6 +1,5 @@
 package com.ams.timesyncedualert.utils
 
-import android.content.Context
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import java.nio.charset.Charset
@@ -13,7 +12,7 @@ import java.io.InputStreamReader
 /**
  * Utility class for handling files related to courses and settings.
  */
-class FileHandler(private val context: Context) {
+class FileHandler {
 
     /**
      * Object responsible for handling operations related to courses, such as reading, writing, and filtering.
@@ -131,7 +130,7 @@ class FileHandler(private val context: Context) {
          *
          * @param fileName The name of the JSON file to be read.
          * @return A map object with string keys and integer arrays as values. */
-        fun readJsonFile(context: Context, fileName: String): Map<String, Array<Int>> {
+        fun readJsonFile(fileName: String): Map<String, Array<Int>> {
             val inputStream = javaClass.classLoader?.getResourceAsStream(fileName)
             val reader = BufferedReader(InputStreamReader(inputStream))
             val json = reader.readText()
@@ -145,11 +144,11 @@ class FileHandler(private val context: Context) {
          * @param period The period needed to convert
          * @param weekDay The current weekDay
          * @return An array with hour and minute as values. */
-        fun period2Time(context: Context, period: Int, weekDay: Int): Array<Int>? {
+        fun period2Time(period: Int, weekDay: Int): Array<Int>? {
             val timeMap: Map<String, Array<Int>> = when (weekDay) {
-                1 -> FileHandler.AssetsHandler.readJsonFile(context,"schedule_monday.json")
-                2 -> FileHandler.AssetsHandler.readJsonFile(context,"schedule_tuesday.json")
-                else -> FileHandler.AssetsHandler.readJsonFile(context,"schedule_rest.json")
+                1 -> readJsonFile("schedule_monday.json")
+                2 -> readJsonFile("schedule_tuesday.json")
+                else -> readJsonFile("schedule_rest.json")
             }
             return timeMap[period.toString()]
         }
