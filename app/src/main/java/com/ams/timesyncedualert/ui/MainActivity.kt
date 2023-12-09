@@ -15,6 +15,17 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cover)
 
+//        debug-only
+//        val fileDir = applicationContext.filesDir
+//        fileDir?.let { dir ->
+//            val fileList = dir.listFiles()
+//            if (fileList != null) {
+//                for (file in fileList) {
+//                    file.delete()
+//                }
+//            }
+//        }
+
         // Initialize data file
         val context: Context = this
         FileHandler.CourseHandler.checkAndCreateFile(context.filesDir.toString())

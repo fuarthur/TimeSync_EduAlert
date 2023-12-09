@@ -67,12 +67,14 @@ class HomepageActivity : AppCompatActivity() {
         val updateCountdownTask = object : TimerTask() {
             // todo: read the following values
             var countdown = 60 // 初始倒计时时间，单位为分钟
-            val timePreset = FileHandler.SettingHandler.readSettings(context.filesDir.toString())[0].toString().toInt()
+            // val timePreset = FileHandler.SettingHandler.readSettings(context.filesDir.toString())[0].toString().toInt()
+            val timePreset = 10
 
             override fun run() {
                 runOnUiThread {
                     val minutes = countdown - 1
-                    mCountdown.text = "$minutes minutes"
+                    val displayText = "$minutes minutes"
+                    mCountdown.text = displayText
 
                     if (minutes == timePreset) {
                         // todo: show notification
