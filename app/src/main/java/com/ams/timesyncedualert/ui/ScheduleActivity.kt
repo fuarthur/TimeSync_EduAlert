@@ -36,6 +36,7 @@ class ScheduleActivity(val supportFragmentManager: FragmentManager) : ComponentA
     private val mPeriod10 by lazy { findViewById<TextView>(R.id.period10) }
     private lateinit var courseList: MutableList<Course>
     private var weekDay: Int = 1
+    private val context: Context = this
     private lateinit var bottomNavigation: BottomNavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,6 +46,9 @@ class ScheduleActivity(val supportFragmentManager: FragmentManager) : ComponentA
         mScheduleSetting.setOnClickListener {
             navigateToScheduleEnter()
         }
+
+
+       courseList = FileHandler.CourseHandler.readCourseList(context.filesDir.toString())
 
         val dayButtons =
             listOf(mScheduleMonday, mScheduleTuesday, mScheduleWednesday, mScheduleThursday, mScheduleFriday)
@@ -64,22 +68,17 @@ class ScheduleActivity(val supportFragmentManager: FragmentManager) : ComponentA
                 R.id.navigation_Home -> {
                     // 切换到 HomeFragment
                     replaceFragment(HomeFragment())
-                    true
                 }
 
                 R.id.navigation_Schedule -> {
                     // 切换到 ScheduleFragment
                     replaceFragment(ScheduleFragment())
-                    true
                 }
 
                 R.id.navigation_Setting -> {
                     // 切换到 SettingFragment
                     replaceFragment(SettingFragment())
-                    true
                 }
-
-                else -> false
             }
             when (item.itemId) {
                 R.id.navigation_Home -> {
@@ -93,7 +92,6 @@ class ScheduleActivity(val supportFragmentManager: FragmentManager) : ComponentA
 
     private fun updateUI() {
         val context: Context = this
-
         courseList = FileHandler.CourseHandler.filterCoursesByWeekDay(
             FileHandler.CourseHandler.readCourseList(context.filesDir.toString()),
             weekDay
@@ -126,5 +124,3 @@ class ScheduleActivity(val supportFragmentManager: FragmentManager) : ComponentA
         transaction.commit()
     }
 }
-
-

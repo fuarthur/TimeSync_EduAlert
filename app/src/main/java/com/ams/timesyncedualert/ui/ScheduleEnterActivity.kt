@@ -40,8 +40,8 @@ class ScheduleEnterActivity : ComponentActivity() {
         mScheduleEditEnterButton.setOnClickListener {
             if (isEnterLegal(
                     mClassNameEnter.text.toString(),
-                    mClassPeriodEnter.text.toString().toInt(),
-                    mClassWeekdayEnter.text.toString().toInt(),
+                    mClassPeriodEnter.text.toString().toIntOrNull() ?: 0,
+                    mClassWeekdayEnter.text.toString().toIntOrNull() ?: 0,
                     mClassClassroomEnter.text.toString()
                 )
             ) {

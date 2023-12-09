@@ -3,17 +3,13 @@
     <string name="tip2">left until the next class</string>
     <string name="tip1">There are still</string>
     <string name="schedule_title">Schedule</string>
-    <string name="setting_title">Setting</string>
     <string name="plus">+</string>
     <string name="monday">Mon</string>
     <string name="tuesday">Tues</string>
     <string name="wednesday">Wed</string>
     <string name="thursday">Thur</string>
     <string name="friday">Fri</string>
-    <string name="button">Button</string>
-    <string name="setting">Setting</string>
     <string name="setting_tip1">Please enter a class the schedule</string>
-    <string name="enter_hint">Please enter your class</string>
     <string name="enter">enter</string>
     <string name="enter_class_name">Please enter your class name</string>
     <string name="enter_class_period">Please enter you class period(1-10)</string>
@@ -33,6 +29,5 @@
     <string name="valid_weekday">Please enter a valid weekday</string>
     <string name="valid_classroom">Please enter a valid classroom</string>
     <string name="success_add">Course added</string>
-    <string name="minutes">min\n</string>
     <string name="back">Back</string>
 </resources>
