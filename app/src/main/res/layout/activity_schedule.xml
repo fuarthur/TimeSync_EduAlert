@@ -110,7 +110,7 @@
             <TextView
                     android:id="@+id/period1"
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_height="wrap_content"
                     android:text="@string/no_class_string"
                     android:textColor="@color/black"
                     android:textSize="30sp"
@@ -119,7 +119,7 @@
             <TextView
                     android:id="@+id/period2"
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_height="wrap_content"
                     android:text="@string/no_class_string"
                     android:textSize="30sp"
                     android:textColor="@color/black"
@@ -128,7 +128,7 @@
             <TextView
                     android:id="@+id/period3"
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_height="wrap_content"
                     android:text="@string/no_class_string"
                     android:textColor="@color/black"
                     android:textSize="30sp"
@@ -137,7 +137,7 @@
             <TextView
                     android:id="@+id/period4"
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_height="wrap_content"
                     android:text="@string/no_class_string"
                     android:textColor="@color/black"
                     android:textSize="30sp"
@@ -146,7 +146,7 @@
             <TextView
                     android:id="@+id/period5"
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_height="wrap_content"
                     android:text="@string/no_class_string"
                     android:textColor="@color/black"
                     android:textSize="30sp"
@@ -155,7 +155,7 @@
             <TextView
                     android:id="@+id/period6"
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_height="wrap_content"
                     android:text="@string/no_class_string"
                     android:textColor="@color/black"
                     android:textSize="30sp"
@@ -164,7 +164,7 @@
             <TextView
                     android:id="@+id/period7"
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_height="wrap_content"
                     android:text="@string/no_class_string"
                     android:textColor="@color/black"
                     android:textSize="30sp"
@@ -173,7 +173,7 @@
             <TextView
                     android:id="@+id/period8"
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_height="wrap_content"
                     android:text="@string/no_class_string"
                     android:textColor="@color/black"
                     android:textSize="30sp"
@@ -182,7 +182,7 @@
             <TextView
                     android:id="@+id/period9"
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_height="wrap_content"
                     android:text="@string/no_class_string"
                     android:textColor="@color/black"
                     android:textSize="30sp"
@@ -191,7 +191,7 @@
             <TextView
                     android:id="@+id/period10"
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_height="wrap_content"
                     android:text="@string/no_class_string"
                     android:textColor="@color/black"
                     android:textSize="30sp"
