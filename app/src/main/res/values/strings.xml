@@ -20,7 +20,7 @@
     <string name="enter_class_weekday">Please enter the weekday of class(1-5)</string>
     <string name="enter_class_room">Please enter you class room</string>
     <string name="tip3">Next class</string>
-    <string name="timesync_edualert_setting">TimeSync EduAlert -- Setting</string>
+    <string name="timesync_edualert_setting">Setting</string>
     <string name="minutes_setting">minutes</string>
     <string name="seconds_setting">seconds</string>
     <string name="switch_of_reminder">Switch of Reminder</string>

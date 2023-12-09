@@ -81,7 +81,14 @@ class ScheduleActivity(val supportFragmentManager: FragmentManager) : ComponentA
 
                 else -> false
             }
+            when (item.itemId) {
+                R.id.navigation_Home -> {
+                    item.setIcon(if (item.isChecked) R.drawable.schedule_select else R.drawable.schedule_idle)
+                }
+            }
+            true
         }
+
     }
 
     private fun updateUI() {

@@ -14,6 +14,7 @@ import com.ams.timesyncedualert.ui.fragment.HomeFragment
 import com.ams.timesyncedualert.ui.fragment.ScheduleFragment
 import com.ams.timesyncedualert.ui.fragment.SettingFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import android.content.Intent
 
 class SettingActivity(val supportFragmentManager: FragmentManager) : ComponentActivity() {
     private lateinit var buttonTimeChange: Button
@@ -23,6 +24,7 @@ class SettingActivity(val supportFragmentManager: FragmentManager) : ComponentAc
     private var minute: Int = 0;
     private var second: Int = 0;
     private lateinit var bottomNavigation: BottomNavigationView
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -60,6 +62,13 @@ class SettingActivity(val supportFragmentManager: FragmentManager) : ComponentAc
 
                 else -> false
             }
+
+            when (item.itemId) {
+                R.id.navigation_Home -> {
+                    item.setIcon(if (item.isChecked) R.drawable.setting_select else R.drawable.setting_idle)
+                }
+            }
+            true
         }
 
     }

@@ -4,6 +4,7 @@ import android.content.Context
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import android.widget.TextView
 import androidx.activity.ComponentActivity
 import androidx.fragment.app.Fragment
@@ -63,7 +64,14 @@ import androidx.navigation.fragment.NavHostFragment
                     }
 
                     else -> false
+
                 }
+                when (item.itemId) {
+                    R.id.navigation_Home -> {
+                        item.setIcon(if (item.isChecked) R.drawable.home_selected else R.drawable.home_idle)
+                    }
+                }
+                true
             }
         }
 

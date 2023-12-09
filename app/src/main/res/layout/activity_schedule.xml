@@ -93,6 +93,7 @@
             android:layout_marginTop="70dp"
             android:background="@color/white"
             android:text="@string/plus"
+            android:textColor="@color/black"
             android:textSize="35sp"
     />
     <ScrollView
@@ -112,7 +113,8 @@
                     android:layout_height="60dp"
                     android:text="@string/no_class_string"
                     android:textSize="30sp"
-                    android:background="@color/white"/>
+                    android:textColor="@color/black"
+                    android:background="@drawable/class_border"/>
 
             <TextView
                     android:id="@+id/period2"
@@ -120,7 +122,8 @@
                     android:layout_height="60dp"
                     android:text="@string/no_class_string"
                     android:textSize="30sp"
-                    android:background="@color/white"/>
+                    android:textColor="@color/black"
+                    android:background="@drawable/class_border"/>
 
             <TextView
                     android:id="@+id/period3"
@@ -128,7 +131,8 @@
                     android:layout_height="60dp"
                     android:text="@string/no_class_string"
                     android:textSize="30sp"
-                    android:background="@color/white"/>
+                    android:textColor="@color/black"
+                    android:background="@drawable/class_border"/>
 
             <TextView
                     android:id="@+id/period4"
@@ -136,7 +140,8 @@
                     android:layout_height="60dp"
                     android:text="@string/no_class_string"
                     android:textSize="30sp"
-                    android:background="@color/white"/>
+                    android:textColor="@color/black"
+                    android:background="@drawable/class_border"/>
 
             <TextView
                     android:id="@+id/period5"
@@ -144,7 +149,8 @@
                     android:layout_height="60dp"
                     android:text="@string/no_class_string"
                     android:textSize="30sp"
-                    android:background="@color/white"/>
+                    android:textColor="@color/black"
+                    android:background="@drawable/class_border"/>
 
             <TextView
                     android:id="@+id/period6"
@@ -152,7 +158,8 @@
                     android:layout_height="60dp"
                     android:text="@string/no_class_string"
                     android:textSize="30sp"
-                    android:background="@color/white"/>
+                    android:textColor="@color/black"
+                    android:background="@drawable/class_border"/>
 
             <TextView
                     android:id="@+id/period7"
@@ -160,7 +167,8 @@
                     android:layout_height="60dp"
                     android:text="@string/no_class_string"
                     android:textSize="30sp"
-                    android:background="@color/white"/>
+                    android:textColor="@color/black"
+                    android:background="@drawable/class_border"/>
 
             <TextView
                     android:id="@+id/period8"
@@ -168,7 +176,8 @@
                     android:layout_height="60dp"
                     android:text="@string/no_class_string"
                     android:textSize="30sp"
-                    android:background="@color/white"/>
+                    android:textColor="@color/black"
+                    android:background="@drawable/class_border"/>
 
             <TextView
                     android:id="@+id/period9"
@@ -176,7 +185,8 @@
                     android:layout_height="60dp"
                     android:text="@string/no_class_string"
                     android:textSize="30sp"
-                    android:background="@color/white"/>
+                    android:textColor="@color/black"
+                    android:background="@drawable/class_border"/>
 
             <TextView
                     android:id="@+id/period10"
@@ -184,7 +194,8 @@
                     android:layout_height="60dp"
                     android:text="@string/no_class_string"
                     android:textSize="30sp"
-                    android:background="@color/white"/>
+                    android:textColor="@color/black"
+                    android:background="@drawable/class_border"/>
 
 
         </LinearLayout>
