@@ -93,10 +93,13 @@ class ScheduleActivity : ComponentActivity() {
         val periodTextViews =
             listOf(mPeriod1, mPeriod2, mPeriod3, mPeriod4, mPeriod5, mPeriod6, mPeriod7, mPeriod8, mPeriod9, mPeriod10)
 
+        for (view in periodTextViews) view.text = getString(R.string.free_period)
+
         for (course in courseList) {
             val period = course.period
             if (period in 1..10) {
-                periodTextViews[period - 1].text = course.name
+                val displayText = "${course.name} in Room ${course.classroom}"
+                periodTextViews[period - 1].text = displayText
             }
         }
     }
