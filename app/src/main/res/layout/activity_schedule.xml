@@ -196,8 +196,6 @@
                     android:textColor="@color/black"
                     android:textSize="30sp"
                     android:background="@drawable/class_border"/>
-
-
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>
