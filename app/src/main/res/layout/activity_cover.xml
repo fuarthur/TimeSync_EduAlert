@@ -12,8 +12,11 @@
             android:background="@color/white"/>
     <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" app:srcCompat="@drawable/icon" android:id="@+id/imageView"
-            android:scaleX="0.5" android:scaleY="0.5"/>
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon"
+            android:id="@+id/imageView"
+            android:scaleX="0.5"
+            android:scaleY="0.5"/>
 
 
 </RelativeLayout>
