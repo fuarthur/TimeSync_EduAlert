@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId = "com.ams.timesyncedualert"
-        minSdk = 24
+        minSdk = 26
         //noinspection EditedTargetSdkVersion
         targetSdk = 34
         versionCode = 1
