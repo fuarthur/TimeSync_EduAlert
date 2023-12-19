@@ -102,17 +102,4 @@
             android:textStyle="bold"
             android:background="@color/white"
             android:textColor="@color/black"/>
-
-    <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/fragment_container_view_tag"
-            android:name="androidx.navigation.fragment.NavHostFragment"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:defaultNavHost="true"
-    />
-
-
-
-
-
 </RelativeLayout>
