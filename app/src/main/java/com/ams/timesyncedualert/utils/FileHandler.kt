@@ -1,5 +1,6 @@
 package com.ams.timesyncedualert.utils
 
+import android.content.Context
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import java.nio.charset.Charset
@@ -130,27 +131,20 @@ class FileHandler {
          *
          * @param fileName The name of the JSON file to be read.
          * @return A map object with string keys and integer arrays as values. */
-        fun readJsonFile(fileName: String): Map<String, Array<Int>> {
-            val inputStream = javaClass.classLoader?.getResourceAsStream(fileName)
+        fun readJsonFile(context: Context, fileName: String): Map<String, List<Int>> {
+            val inputStream = context.assets.open(fileName)
             val reader = BufferedReader(InputStreamReader(inputStream))
-            val json = reader.readText()
-            val typeToken = object : TypeToken<Map<String, Array<Int>>>() {}.type
-            return Gson().fromJson(json, typeToken)
-        }
+            val content = StringBuilder()
 
-        /**
-         * Convert period into time
-         *
-         * @param period The period needed to convert
-         * @param weekDay The current weekDay
-         * @return An array with hour and minute as values. */
-        fun period2Time(period: Int, weekDay: Int): Array<Int>? {
-            val timeMap: Map<String, Array<Int>> = when (weekDay) {
-                1 -> readJsonFile("schedule_monday.json")
-                2 -> readJsonFile("schedule_tuesday.json")
-                else -> readJsonFile("schedule_rest.json")
+            // 读取文件内容
+            var line: String?
+            while (reader.readLine().also { line = it } != null) {
+                content.append(line)
             }
-            return timeMap[period.toString()]
+
+            // 使用 Gson 解析 JSON 内容
+            val type = object : TypeToken<Map<String, List<Int>>>() {}.type
+            return Gson().fromJson(content.toString(), type)
         }
     }
 }
