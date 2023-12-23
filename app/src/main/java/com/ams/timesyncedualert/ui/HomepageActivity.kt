@@ -132,9 +132,7 @@ class HomepageActivity : AppCompatActivity() {
         val minute = now.get(Calendar.MINUTE)
 
         var cPeriod = -1
-        var debugV = 0
         for ((period, time) in timeTable) {
-            debugV++
             val periodHour = time[0]
             val periodMinute = time[1]
             if ((hour < periodHour) || (hour == periodHour && minute < periodMinute)) {
