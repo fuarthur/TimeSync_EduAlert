@@ -11,11 +11,10 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.ams.timesyncedualert.R
 import com.ams.timesyncedualert.utils.FileHandler
-import com.ams.timesyncedualert.utils.NotificationHelper
 
 class MainActivity : ComponentActivity() {
 
-    private val MY_PERMISSIONS_REQUEST_POST_NOTIFICATIONS = 100
+    private val POST_NOTIFICATIONS_PERMISSION_REQUEST = 100
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,11 +35,11 @@ class MainActivity : ComponentActivity() {
             ActivityCompat.requestPermissions(
                 this,
                 arrayOf("android.permission.POST_NOTIFICATIONS"),
-                MY_PERMISSIONS_REQUEST_POST_NOTIFICATIONS
+                POST_NOTIFICATIONS_PERMISSION_REQUEST
             )
         } else {
             // Permission has already been granted
-            sendNotificationAndNavigate()
+            navigate()
         }
     }
 
@@ -52,11 +51,11 @@ class MainActivity : ComponentActivity() {
     ) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         when (requestCode) {
-            MY_PERMISSIONS_REQUEST_POST_NOTIFICATIONS -> {
+            POST_NOTIFICATIONS_PERMISSION_REQUEST -> {
                 // If permission request is cancelled, the result arrays are empty
                 if (grantResults.isNotEmpty() && grantResults[0] == android.content.pm.PackageManager.PERMISSION_GRANTED) {
                     // Permission granted, send notification and navigate
-                    sendNotificationAndNavigate()
+                    navigate()
                 } else {
                     showToastForPermissionDenied()
                 }
@@ -73,8 +72,7 @@ class MainActivity : ComponentActivity() {
         Toast.makeText(this, message, Toast.LENGTH_LONG).show()
     }
 
-    private fun sendNotificationAndNavigate() {
-        NotificationHelper.sendNotification(this, "TimeSync EduAlert", "Test")
+    private fun navigate() {
         Handler(Looper.myLooper()!!).postDelayed({
             navigateToHomepage()
         }, resources.getInteger(R.integer.cover_delay_milis).toLong())
