@@ -23,6 +23,8 @@
             android:background="@color/color_primary"
             android:layout_height="70dp"
             android:layout_alignParentBottom="true"
+            app:itemIconTint="@color/black"
+            app:itemTextColor="@color/black"
     />
     <Button
             android:id="@+id/Schedule_monday"
@@ -31,7 +33,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginBottom="100dp"
             android:layout_alignParentBottom="true"
-            android:background="@color/color_primary"
+            android:background="@color/black"
             android:text="@string/monday"
             android:textSize="18sp"
             android:textColor="@color/white"
