@@ -25,35 +25,50 @@ class HomepageActivity : AppCompatActivity() {
     private lateinit var bottomNavigation: BottomNavigationView
     private var timer: Timer? = null
     private val timePreset = 10 // Assuming this is a constant value
+    private lateinit var homeItem: MenuItem
+    private lateinit var scheduleItem: MenuItem
+    private lateinit var settingItem: MenuItem
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_homepage)
 
-        setupBottomNavigation()
         getTimeTableAndCourseList()
         updateCurrentPeriod()
         updateUI()
         countDownTick()
-    }
 
-    private fun setupBottomNavigation() {
         bottomNavigation = findViewById(R.id.bottom_navi)
+        homeItem = bottomNavigation.menu.findItem(R.id.navigation_Home)
+        scheduleItem = bottomNavigation.menu.findItem(R.id.navigation_Schedule)
+        settingItem = bottomNavigation.menu.findItem(R.id.navigation_Setting)
+
+        updatenavi()
+
         bottomNavigation.setOnItemSelectedListener { item ->
             when (item.itemId) {
-                R.id.navigation_Home -> item.setIcon(
-                    getIconResource(
-                        item,
-                        R.drawable.home_selected,
-                        R.drawable.home_idle
-                    )
-                )
-                R.id.navigation_Schedule -> navigateToSchedule()
-                R.id.navigation_Setting -> navigateToSetting()
+                R.id.navigation_Home -> {
+                    updatenavi()
+                    // 处理导航到 Home 页面的逻辑
+                }
+                R.id.navigation_Schedule -> {
+                    updatenavi()
+                    navigateToSchedule()
+                    // 处理导航到 Schedule 页面的逻辑
+                }
+                R.id.navigation_Setting -> {
+                    updatenavi()
+                    navigateToSetting()
+                    // 处理导航到 Setting 页面的逻辑
+                }
             }
             true
         }
+
     }
+
+
 
     private fun getIconResource(item: MenuItem, selectedRes: Int, idleRes: Int): Int {
         return if (item.isChecked) selectedRes else idleRes
@@ -173,5 +188,10 @@ class HomepageActivity : AppCompatActivity() {
             FileHandler.CourseHandler.readCourseList(context.filesDir.toString()),
             weekday
         )
+    }
+    private fun updatenavi() {
+        homeItem.setIcon(R.drawable.home_selected)
+        scheduleItem.setIcon(R.drawable.schedule_idle)
+        settingItem.setIcon(R.drawable.setting_idle)
     }
 }

@@ -4,9 +4,11 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.MenuItem
 import android.widget.Button
 import android.widget.TextView
 import androidx.activity.ComponentActivity
+import androidx.core.content.ContextCompat
 import com.ams.timesyncedualert.R
 import com.ams.timesyncedualert.model.Course
 import com.ams.timesyncedualert.utils.FileHandler
@@ -33,9 +35,16 @@ class ScheduleActivity : ComponentActivity() {
     private var weekDay: Int = 1
     private val context: Context = this
     private lateinit var bottomNavigation: BottomNavigationView
+    private lateinit var homeItem: MenuItem
+    private lateinit var scheduleItem: MenuItem
+    private lateinit var settingItem: MenuItem
+    private var primaryColor: Int = 0
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val blackColor = ContextCompat.getColor(this, R.color.black)
+        primaryColor = ContextCompat.getColor(this, R.color.color_primary)
         setContentView(R.layout.activity_schedule)
 
         mScheduleSetting.setOnClickListener {
@@ -56,31 +65,41 @@ class ScheduleActivity : ComponentActivity() {
             }
         }
         updateUI()
-
         bottomNavigation = findViewById(R.id.bottom_navi)
+        homeItem = bottomNavigation.menu.findItem(R.id.navigation_Home)
+        scheduleItem = bottomNavigation.menu.findItem(R.id.navigation_Schedule)
+        settingItem = bottomNavigation.menu.findItem(R.id.navigation_Setting)
+
+        updatenavi()
 
         bottomNavigation.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.navigation_Home -> {
-                    // 切换到 HomeFragment
+                    updatenavi()
                     navigateToHomepage()
+                    // 处理导航到 Home 页面的逻辑
                 }
-
                 R.id.navigation_Schedule -> {
+                    updatenavi()
+                    // 处理导航到 Schedule 页面的逻辑
                 }
-
                 R.id.navigation_Setting -> {
+                    updatenavi()
                     navigateToSetting()
-                }
-            }
-            when (item.itemId) {
-                R.id.navigation_Home -> {
-                    item.setIcon(if (item.isChecked) R.drawable.schedule_select else R.drawable.schedule_idle)
+                    // 处理导航到 Setting 页面的逻辑
                 }
             }
             true
         }
 
+        for ((index, button) in dayButtons.withIndex()) {
+            button.setOnClickListener {
+                resetButtonColors(dayButtons)
+                weekDay = index + 1
+                updateUI()
+                button.setBackgroundColor(blackColor)
+            }
+        }
     }
 
     private fun updateUI() {
@@ -121,4 +140,16 @@ class ScheduleActivity : ComponentActivity() {
         startActivity(intent)
         finish()
     }
+    private fun updatenavi() {
+        homeItem.setIcon(R.drawable.home_idle)
+        scheduleItem.setIcon(R.drawable.schedule_select)
+        settingItem.setIcon(R.drawable.setting_idle)
+    }
+
+
+    // 重置按钮颜色的函数
+    private fun resetButtonColors(buttons: List<Button>) {
+        buttons.forEach { it.setBackgroundColor(primaryColor) }
+    }
+
 }

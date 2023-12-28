@@ -2,6 +2,7 @@ package com.ams.timesyncedualert.ui
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.Button
 import android.widget.EditText
 import androidx.activity.ComponentActivity
@@ -17,6 +18,10 @@ class SettingActivity : ComponentActivity() {
     private var minute: Int = 0
     private var second: Int = 0
     private lateinit var bottomNavigation: BottomNavigationView
+    private lateinit var homeItem: MenuItem
+    private lateinit var scheduleItem: MenuItem
+    private lateinit var settingItem: MenuItem
+
 
 
 
@@ -32,25 +37,27 @@ class SettingActivity : ComponentActivity() {
         }
 
         bottomNavigation = findViewById(R.id.bottom_navi)
+        homeItem = bottomNavigation.menu.findItem(R.id.navigation_Home)
+        scheduleItem = bottomNavigation.menu.findItem(R.id.navigation_Schedule)
+        settingItem = bottomNavigation.menu.findItem(R.id.navigation_Setting)
+
+        updatenavi()
 
         bottomNavigation.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.navigation_Home -> {
+                    updatenavi()
                     navigateToHomepage()
+                    // 处理导航到 Home 页面的逻辑
                 }
-
                 R.id.navigation_Schedule -> {
+                    updatenavi()
                     navigateToSchedule()
+                    // 处理导航到 Schedule 页面的逻辑
                 }
-
                 R.id.navigation_Setting -> {
-
-                }
-            }
-
-            when (item.itemId) {
-                R.id.navigation_Home -> {
-                    item.setIcon(if (item.isChecked) R.drawable.setting_select else R.drawable.setting_idle)
+                    updatenavi()
+                    // 处理导航到 Setting 页面的逻辑
                 }
             }
             true
@@ -66,5 +73,10 @@ class SettingActivity : ComponentActivity() {
         val intent = Intent(this, HomepageActivity::class.java)
         startActivity(intent)
         finish()
+    }
+    private fun updatenavi() {
+        homeItem.setIcon(R.drawable.home_idle)
+        scheduleItem.setIcon(R.drawable.schedule_idle)
+        settingItem.setIcon(R.drawable.setting_select)
     }
 }
