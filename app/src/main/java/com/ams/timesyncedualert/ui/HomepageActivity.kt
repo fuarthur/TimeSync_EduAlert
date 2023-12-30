@@ -52,11 +52,13 @@ class HomepageActivity : AppCompatActivity() {
                     updatenavi()
                     // 处理导航到 Home 页面的逻辑
                 }
+
                 R.id.navigation_Schedule -> {
                     updatenavi()
                     navigateToSchedule()
                     // 处理导航到 Schedule 页面的逻辑
                 }
+
                 R.id.navigation_Setting -> {
                     updatenavi()
                     navigateToSetting()
@@ -68,10 +70,9 @@ class HomepageActivity : AppCompatActivity() {
 
     }
 
-
-
-    private fun getIconResource(item: MenuItem, selectedRes: Int, idleRes: Int): Int {
-        return if (item.isChecked) selectedRes else idleRes
+    override fun onDestroy() {
+        super.onDestroy()
+        timer?.cancel()
     }
 
     private fun updateUI() {
@@ -189,6 +190,7 @@ class HomepageActivity : AppCompatActivity() {
             weekday
         )
     }
+
     private fun updatenavi() {
         homeItem.setIcon(R.drawable.home_selected)
         scheduleItem.setIcon(R.drawable.schedule_idle)
