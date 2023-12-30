@@ -3,7 +3,6 @@ package com.ams.timesyncedualert.ui
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.MenuItem
 import android.widget.Button
 import android.widget.TextView
@@ -48,12 +47,11 @@ class ScheduleActivity : ComponentActivity() {
         setContentView(R.layout.activity_schedule)
 
         mScheduleSetting.setOnClickListener {
-            Log.d("user", "111111")
             navigateToScheduleEnter()
         }
 
 
-       courseList = FileHandler.CourseHandler.readCourseList(context.filesDir.toString())
+        courseList = FileHandler.CourseHandler.readCourseList(context.filesDir.toString())
 
         val dayButtons =
             listOf(mScheduleMonday, mScheduleTuesday, mScheduleWednesday, mScheduleThursday, mScheduleFriday)
@@ -77,16 +75,13 @@ class ScheduleActivity : ComponentActivity() {
                 R.id.navigation_Home -> {
                     updatenavi()
                     navigateToHomepage()
-                    // 处理导航到 Home 页面的逻辑
                 }
                 R.id.navigation_Schedule -> {
                     updatenavi()
-                    // 处理导航到 Schedule 页面的逻辑
                 }
                 R.id.navigation_Setting -> {
                     updatenavi()
                     navigateToSetting()
-                    // 处理导航到 Setting 页面的逻辑
                 }
             }
             true
@@ -147,7 +142,6 @@ class ScheduleActivity : ComponentActivity() {
     }
 
 
-    // 重置按钮颜色的函数
     private fun resetButtonColors(buttons: List<Button>) {
         buttons.forEach { it.setBackgroundColor(primaryColor) }
     }
