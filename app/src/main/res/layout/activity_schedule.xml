@@ -194,14 +194,25 @@
             android:textColor="@color/white"
     />
     <Button
-            android:id="@+id/Schedule_setting"
+            android:id="@+id/Schedule_setting_plus"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginStart="330dp"
+            android:layout_marginStart="280dp"
             android:layout_marginTop="70dp"
-            android:background="@color/white"
+            android:background="@color/color_primary"
             android:text="@string/plus"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
+            android:textSize="35sp"
+    />
+    <Button
+            android:id="@+id/Schedule_setting_minus"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="340dp"
+            android:layout_marginTop="70dp"
+            android:background="@color/color_primary"
+            android:text="@string/schedule_setting_minus"
+            android:textColor="@color/white"
             android:textSize="35sp"
     />
 
