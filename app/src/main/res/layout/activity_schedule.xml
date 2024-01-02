@@ -26,81 +26,10 @@
             app:itemIconTint="@color/black"
             app:itemTextColor="@color/black"
     />
-    <Button
-            android:id="@+id/Schedule_monday"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginBottom="100dp"
-            android:layout_alignParentBottom="true"
-            android:background="@color/black"
-            android:text="@string/monday"
-            android:textSize="18sp"
-            android:textColor="@color/white"
-    />
-    <Button
-            android:id="@+id/Schedule_tuesday"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="100dp"
-            android:layout_marginBottom="100dp"
-            android:layout_alignParentBottom="true"
-            android:background="@color/color_primary"
-            android:text="@string/tuesday"
-            android:textSize="18sp"
-            android:textColor="@color/white"
-    />
-    <Button
-            android:id="@+id/Schedule_wednesday"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="180dp"
-            android:layout_marginBottom="100dp"
-            android:layout_alignParentBottom="true"
-            android:background="@color/color_primary"
-            android:text="@string/wednesday"
-            android:textSize="18sp"
-            android:textColor="@color/white"
-    />
-    <Button
-            android:id="@+id/Schedule_thursday"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="260dp"
-            android:layout_marginBottom="100dp"
-            android:layout_alignParentBottom="true"
-            android:background="@color/color_primary"
-            android:text="@string/thursday"
-            android:textSize="18sp"
-            android:textColor="@color/white"
-    />
-    <Button
-            android:id="@+id/Schedule_friday"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginBottom="100dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="340dp"
-            android:layout_marginTop="570dp"
-            android:background="@color/color_primary"
-            android:text="@string/friday"
-            android:textSize="18sp"
-            android:textColor="@color/white"
-    />
-    <Button
-            android:id="@+id/Schedule_setting"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="330dp"
-            android:layout_marginTop="70dp"
-            android:background="@color/white"
-            android:text="@string/plus"
-            android:textColor="@color/black"
-            android:textSize="35sp"
-    />
+
     <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="410dp"
+            android:layout_height="430dp"
             android:layout_marginTop="130dp">
 
         <LinearLayout
@@ -200,4 +129,80 @@
                     android:background="@drawable/class_border"/>
         </LinearLayout>
     </ScrollView>
+
+    <Button
+            android:id="@+id/Schedule_monday"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="100dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/black"
+            android:text="@string/monday"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+    />
+
+
+    <Button
+            android:id="@+id/Schedule_tuesday"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginBottom="100dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_primary"
+            android:text="@string/tuesday"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+    />
+    <Button
+            android:id="@+id/Schedule_wednesday"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="180dp"
+            android:layout_marginBottom="100dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_primary"
+            android:text="@string/wednesday"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+    />
+    <Button
+            android:id="@+id/Schedule_thursday"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="260dp"
+            android:layout_marginBottom="100dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_primary"
+            android:text="@string/thursday"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+    />
+    <Button
+            android:id="@+id/Schedule_friday"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="340dp"
+            android:layout_marginTop="570dp"
+            android:background="@color/color_primary"
+            android:text="@string/friday"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+    />
+    <Button
+            android:id="@+id/Schedule_setting"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="330dp"
+            android:layout_marginTop="70dp"
+            android:background="@color/white"
+            android:text="@string/plus"
+            android:textColor="@color/black"
+            android:textSize="35sp"
+    />
+
 </RelativeLayout>
