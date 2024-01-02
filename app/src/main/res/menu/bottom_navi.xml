@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+        <item
+                android:id="@+id/navigation_Home"
+                android:title="Home"
+                android:icon="@drawable/home_idle"/>
+
+
+        <item
+                android:id="@+id/navigation_Schedule"
+                android:title="Schedule"
+                android:icon="@drawable/schedule_idle" />
+
+        <item
+                android:id="@+id/navigation_Setting"
+                android:title="Setting"
+                android:icon="@drawable/setting_idle" />
+</menu>

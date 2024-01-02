@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:background="@color/white"
+>
+    <TextView
+            android:id="@+id/home_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/homepage_title"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:padding="16dp"
+            android:background="@color/color_primary"
+            android:textColor="@android:color/white"/>
+    <TextView
+            android:id="@+id/countdown"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="110dp"
+            android:layout_centerHorizontal="true"
+            android:text="@string/no_class_string"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:background="@drawable/count_down_shape"
+            android:textColor="@android:color/white"/>
+    <TextView
+            android:id="@+id/tip1"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="60dp"
+            android:layout_centerHorizontal="true"
+            android:text="@string/tip1"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:background="@color/white"
+            android:textColor="@color/black"/>
+    <TextView
+            android:id="@+id/tip2"
+            android:layout_width="320dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="310dp"
+            android:layout_centerHorizontal="true"
+            android:text="@string/tip2"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:background="@color/white"
+            android:textColor="@color/black"/>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navi"
+            app:menu="@menu/bottom_navi"
+            android:layout_width="match_parent"
+            android:background="@color/color_primary"
+            app:itemIconTint="@color/black"
+            app:itemTextColor="@color/black"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
+            />
+
+    <TextView
+            android:id="@+id/next_period1"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="@string/free_period"
+            android:textSize="30sp"
+            android:layout_marginTop="430dp"
+            android:textColor="@color/black"
+            android:background="@drawable/class_border"/>
+
+    <TextView
+            android:id="@+id/next_period2"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="@string/free_period"
+            android:textSize="30sp"
+            android:layout_marginTop="490dp"
+            android:textColor="@color/black"
+            android:background="@drawable/class_border"/>
+
+    <TextView
+            android:id="@+id/next_period3"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="@string/free_period"
+            android:textSize="30sp"
+            android:layout_marginTop="550dp"
+            android:textColor="@color/black"
+            android:background="@drawable/class_border"/>
+
+
+
+    <TextView
+            android:id="@+id/tip3"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="370dp"
+            android:layout_centerHorizontal="true"
+            android:text="@string/tip3"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:background="@color/white"
+            android:textColor="@color/black"/>
+</RelativeLayout>

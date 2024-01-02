@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:background="@color/white"
+>
+    <TextView
+            android:id="@+id/schedule_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/schedule_title"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:padding="16dp"
+            android:background="@color/color_primary"
+            android:textColor="@android:color/white"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navi"
+            app:menu="@menu/bottom_navi"
+            android:layout_width="match_parent"
+            android:background="@color/color_primary"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
+            app:itemIconTint="@color/black"
+            app:itemTextColor="@color/black"
+    />
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="430dp"
+            android:layout_marginTop="130dp">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+            <TextView
+                    android:id="@+id/period1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no_class_string"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    android:background="@drawable/class_border"/>
+
+            <TextView
+                    android:id="@+id/period2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no_class_string"
+                    android:textSize="30sp"
+                    android:textColor="@color/black"
+                    android:background="@drawable/class_border"/>
+
+            <TextView
+                    android:id="@+id/period3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no_class_string"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    android:background="@drawable/class_border"/>
+
+            <TextView
+                    android:id="@+id/period4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no_class_string"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    android:background="@drawable/class_border"/>
+
+            <TextView
+                    android:id="@+id/period5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no_class_string"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    android:background="@drawable/class_border"/>
+
+            <TextView
+                    android:id="@+id/period6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no_class_string"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    android:background="@drawable/class_border"/>
+
+            <TextView
+                    android:id="@+id/period7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no_class_string"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    android:background="@drawable/class_border"/>
+
+            <TextView
+                    android:id="@+id/period8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no_class_string"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    android:background="@drawable/class_border"/>
+
+            <TextView
+                    android:id="@+id/period9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no_class_string"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    android:background="@drawable/class_border"/>
+
+            <TextView
+                    android:id="@+id/period10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no_class_string"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    android:background="@drawable/class_border"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+            android:id="@+id/Schedule_monday"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="100dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/black"
+            android:text="@string/monday"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+    />
+
+
+    <Button
+            android:id="@+id/Schedule_tuesday"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginBottom="100dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_primary"
+            android:text="@string/tuesday"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+    />
+    <Button
+            android:id="@+id/Schedule_wednesday"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="180dp"
+            android:layout_marginBottom="100dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_primary"
+            android:text="@string/wednesday"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+    />
+    <Button
+            android:id="@+id/Schedule_thursday"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="260dp"
+            android:layout_marginBottom="100dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_primary"
+            android:text="@string/thursday"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+    />
+    <Button
+            android:id="@+id/Schedule_friday"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="340dp"
+            android:layout_marginTop="570dp"
+            android:background="@color/color_primary"
+            android:text="@string/friday"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+    />
+    <Button
+            android:id="@+id/Schedule_setting_plus"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="280dp"
+            android:layout_marginTop="70dp"
+            android:background="@color/color_primary"
+            android:text="@string/plus"
+            android:textColor="@color/white"
+            android:textSize="35sp"
+    />
+    <Button
+            android:id="@+id/Schedule_setting_minus"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="340dp"
+            android:layout_marginTop="70dp"
+            android:background="@color/color_primary"
+            android:text="@string/schedule_setting_minus"
+            android:textColor="@color/white"
+            android:textSize="35sp"
+    />
+
+</RelativeLayout>
