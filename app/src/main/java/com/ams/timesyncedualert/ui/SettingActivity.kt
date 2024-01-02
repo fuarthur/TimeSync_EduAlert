@@ -11,7 +11,6 @@ import com.ams.timesyncedualert.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class SettingActivity : ComponentActivity() {
-    private lateinit var buttonTimeChange: Button
     private lateinit var editTextMinute: EditText
     private lateinit var editTextSecond: EditText
     private lateinit var switchReminder: SwitchCompat
@@ -27,14 +26,13 @@ class SettingActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_setting)
-        buttonTimeChange = findViewById(R.id.submit_button_time)
-        editTextMinute = findViewById(R.id.minute_interact)
-        editTextSecond = findViewById(R.id.second_interact)
-        switchReminder = findViewById(R.id.switchOfReminder)
+        setContentView(R.layout.wip)
+        //buttonTimeChange = findViewById(R.id.submit_button_time)
+        //editTextMinute = findViewById(R.id.minute_interact)
+        //editTextSecond = findViewById(R.id.second_interact)
+        //switchReminder = findViewById(R.id.switchOfReminder)
 
-        buttonTimeChange.setOnClickListener {
-        }
+
 
         bottomNavigation = findViewById(R.id.bottom_navi)
         homeItem = bottomNavigation.menu.findItem(R.id.navigation_Home)

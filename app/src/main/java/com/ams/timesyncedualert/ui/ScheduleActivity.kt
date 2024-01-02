@@ -19,7 +19,7 @@ class ScheduleActivity : ComponentActivity() {
     private val mScheduleWednesday by lazy { findViewById<Button>(R.id.Schedule_wednesday) }
     private val mScheduleThursday by lazy { findViewById<Button>(R.id.Schedule_thursday) }
     private val mScheduleFriday by lazy { findViewById<Button>(R.id.Schedule_friday) }
-    private val mScheduleSetting by lazy { findViewById<Button>(R.id.Schedule_setting) }
+    private val mScheduleSetting by lazy { findViewById<Button>(R.id.Schedule_setting_plus) }
     private val mPeriod1 by lazy { findViewById<TextView>(R.id.period1) }
     private val mPeriod2 by lazy { findViewById<TextView>(R.id.period2) }
     private val mPeriod3 by lazy { findViewById<TextView>(R.id.period3) }

@@ -33,4 +33,6 @@
     <string name="free_period">Free Period</string>
     <string name="homepage_title">Homepage</string>
     <string name="schedule_setting_minus">-</string>
+    <string name="work_in_progress">WORK IN PROGRESS</string>
+    <string name="work_in_progress_title">Work in progress</string>
 </resources>

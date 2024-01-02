@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+            android:id="@+id/wip_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/work_in_progress_title"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:padding="16dp"
+            android:background="@color/color_primary"
+            android:textColor="@android:color/white"/>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navi"
+            app:menu="@menu/bottom_navi"
+            android:layout_width="match_parent"
+            android:background="@color/color_primary"
+            app:itemIconTint="@color/black"
+            app:itemTextColor="@color/black"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"/>
+    <TextView
+            android:id="@+id/wip_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/work_in_progress"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:padding="16dp"
+            android:background="@color/white"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"/>
+
+
+</RelativeLayout>
+
