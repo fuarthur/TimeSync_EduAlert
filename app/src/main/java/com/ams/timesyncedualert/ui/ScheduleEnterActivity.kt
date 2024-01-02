@@ -4,11 +4,11 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import com.ams.timesyncedualert.R
-import android.widget.EditText
-import android.widget.Button
-import android.widget.Toast
 import com.ams.timesyncedualert.model.Course
 import com.ams.timesyncedualert.utils.FileHandler
 
@@ -96,6 +96,7 @@ class ScheduleEnterActivity : ComponentActivity() {
         }
         courseList.add(courseAdd)
     }
+
 
     /**
      * Navigates to the Schedule Activity.

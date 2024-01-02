@@ -10,7 +10,7 @@
             android:id="@+id/wip_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/schedule_title"
+            android:text="@string/timesync_edualert_setting"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="16dp"

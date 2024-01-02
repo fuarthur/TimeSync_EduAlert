@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.core.content.ContextCompat
 import com.ams.timesyncedualert.R
@@ -20,6 +21,7 @@ class ScheduleActivity : ComponentActivity() {
     private val mScheduleThursday by lazy { findViewById<Button>(R.id.Schedule_thursday) }
     private val mScheduleFriday by lazy { findViewById<Button>(R.id.Schedule_friday) }
     private val mScheduleSetting by lazy { findViewById<Button>(R.id.Schedule_setting_plus) }
+    private val mScheduleDelete by lazy { findViewById<Button>(R.id.Schedule_setting_minus) }
     private val mPeriod1 by lazy { findViewById<TextView>(R.id.period1) }
     private val mPeriod2 by lazy { findViewById<TextView>(R.id.period2) }
     private val mPeriod3 by lazy { findViewById<TextView>(R.id.period3) }
@@ -48,6 +50,12 @@ class ScheduleActivity : ComponentActivity() {
 
         mScheduleSetting.setOnClickListener {
             navigateToScheduleEnter()
+        }
+
+        mScheduleDelete.setOnClickListener {
+            clearAllFile()
+            Toast.makeText(context, "Clear Success", Toast.LENGTH_SHORT).show()
+            navigateToHomepage()
         }
 
 
@@ -144,6 +152,19 @@ class ScheduleActivity : ComponentActivity() {
 
     private fun resetButtonColors(buttons: List<Button>) {
         buttons.forEach { it.setBackgroundColor(primaryColor) }
+    }
+
+    private fun clearAllFile() {
+        val fileDir = applicationContext.filesDir
+        fileDir?.let { dir ->
+            val fileList = dir.listFiles()
+            if (fileList != null) {
+                for (file in fileList) {
+                    file.delete()
+                }
+            }
+        }
+        FileHandler.CourseHandler.checkAndCreateFile(fileDir.toString())
     }
 
 }

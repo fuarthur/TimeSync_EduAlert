@@ -77,9 +77,9 @@ class HomepageActivity : AppCompatActivity() {
 
     private fun updateUI() {
         mCountdown.text = timeDiff().toString()
-        val n1Course = getNextCourseIfExist(currentPeriod - 1)
-        val n2Course = getNextCourseIfExist(currentPeriod)
-        val n3Course = getNextCourseIfExist(currentPeriod + 1)
+        val n1Course = getNextCourseIfExist(currentPeriod)
+        val n2Course = getNextCourseIfExist(currentPeriod + 1)
+        val n3Course = getNextCourseIfExist(currentPeriod + 2)
         setNextPeriodText(mNextPeriod1, n1Course)
         setNextPeriodText(mNextPeriod2, n2Course)
         setNextPeriodText(mNextPeriod3, n3Course)
@@ -159,7 +159,7 @@ class HomepageActivity : AppCompatActivity() {
     }
 
     private fun updateCountdownDisplay(minutes: Int) {
-        val displayText = "$minutes minutes"
+        val displayText = "$minutes min"
         mCountdown.text = displayText
         if (minutes == timePreset) sendNotification()
     }
